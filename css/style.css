@@ -16,7 +16,7 @@
     text-align: left;
     font: arial;    
     font-size: 9px;
-    font-weight: 100;
+    font-weight: 200;
 }
 #main{    
     margin: 1%;
@@ -45,7 +45,19 @@ h1{
     text-align: center;
 }
 #datum{
-    padding: 1%;
-    border: none;
+    margin: 1%;
+    padding: 3%;
+    border: thin;
+    border-radius: 25px;
     width: auto;
+    font-size: 20px;    
+}
+.button{
+    display: inline-block;
+    padding: 2% 4%;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor:pointer;
+    background-color: cornflowerblue;
 }
