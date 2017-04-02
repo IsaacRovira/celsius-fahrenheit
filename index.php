@@ -13,6 +13,16 @@
         Límite superior 10000ºC o 18032ºF
         Valor por defecto 0ºC o 0ºF
         */
+        
+        //Variables
+        if(isset($_POST['enviar']))
+        {
+            $datum = $_POST['valor'];
+            $unit = $_POST['unidad'];
+            $T_max = 10000;
+            $T_min = -273;
+        }
+        if(!isset($datum)){$datum = "";}
 
         //Función para la conversión
             function CtoF($temp, $und)
@@ -38,13 +48,13 @@
                     case "C":
                         if($temp < $min || $temp > $max)
                         {
-                            throw new Exception("Valor fuera de rango (".$min." / ".$max.").");
+                            throw new Exception("Valor fuera de rango (".$min." / ".$max.")");
                         }
                         return true;
                     case "F":
                         if($temp < CtoF($min,'C') || $temp > CtoF($max, 'C'))
                         {
-                            throw new Exception("Valor fuera de rango (".CtoF($min, 'C')." / ".CtoF($max, 'C').").");
+                            throw new Exception("Valor fuera de rango (".CtoF($min, 'C')." / ".CtoF($max, 'C').")");
                         }
                         return true;
                 }
@@ -55,7 +65,7 @@
             {
                 if(!is_numeric($temp))
                 {
-                    throw new Exception("Error, el valor introducido no es un número.");
+                    throw new Exception("El valor introducido no es un número.");
                 }
                 return true;
             }            
@@ -69,7 +79,7 @@
                     <div id="main">
                     <div class="datos">
                         Temperatura<br/>
-                        <input class="datum" type="text" name="valor" value="0"/>
+                        <input class="datum" type="text" name="valor" value="<?php echo $datum;?>"/>
                     </div>
                     <div class="datos">
                         <input type="radio" name="unidad" value="C" checked/>°C <input type="radio" name="unidad" value="F"/>°F
@@ -77,6 +87,7 @@
                     <div class="datos">
                         Resultado<br/>
                         <?php
+                        //Resultado de la conversión
                         //Comprobamos que hemos recibido el POST
                         if(isset($_POST['enviar']))
                         {
@@ -92,13 +103,13 @@
                                 {
                                    if(checkMaxMin($datum, $unit, $T_max, $T_min)) //Está dentro del rango definido?
                                     {
-                                        print("<p class='datum' id='resultado'>".number_format(CtoF($datum,$unit), 2).CorF($unit).".</p>");
+                                        print("<p class='datum' id='resultado'>".number_format(CtoF($datum,$unit), 2).CorF($unit)."</p>");
                                     }
                                 }
                             }
                             catch(Exception $e)
                             {
-                                die($e->getMessage());
+                                echo("<p class='error'>".$e->getMessage()."</p>");
                             }
                         }
                         ?>                    
