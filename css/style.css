@@ -1,0 +1,51 @@
+.header {
+    margin: 1%;    
+    border-radius: 20px;
+    border-color: deepskyblue;
+    border-style: solid;
+    border-width: thin;
+}
+
+.footer{
+    margin: 1%;
+    padding: 2%;
+    border-width: thin;
+    border-style:solid;    
+    border-color: deepskyblue;
+    border-radius: 20px;
+    text-align: left;
+    font: arial;    
+    font-size: 9px;
+    font-weight: 100;
+}
+#main{    
+    margin: 1%;
+    border-radius: 20px;
+    border-color: deepskyblue;
+    border-style: solid;
+    border-width: thin;
+    align-content: center;
+    padding: 2%;
+}
+#menu {
+    display: inline-block;    
+    border-color: black;
+    background-color: aqua;
+    margin: 2%;    
+    height: 24%;
+}
+#frame{
+    border-style: none;
+    margin: 0px;
+    padding: 0.5%;
+    align-content: center;
+    display: block;
+}
+h1{
+    text-align: center;
+}
+#datum{
+    padding: 1%;
+    border: none;
+    width: auto;
+}

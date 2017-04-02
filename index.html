@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta charset="UTF-8">
+        <title>Celcius to Farenheit</title>
+    </head>
+    <body>
+        <div id="frame">
+            <div class="header">
+                <h1>Conversor Celsius a Farhenheit</h1>
+            </div>
+            <div id="main">
+                <form name="conversor" method="post" action="php/resultado.php">
+                    <P>Introduce un valor en el cuadro, seleciona la unidad y pusla el boton calcular.</P>
+                    <br/>
+                    <div id="datos">
+                        Valor: <input id="datum" type="text" name="valor" value="0"/> <input type="radio" name="unidad" value="C" checked/>°C <input type="radio" name="unidad" value="F"/>°F
+                    </div>
+                    <br/><br/><br/>
+                    <input value="Convertir" type="submit" name="enviar">      
+                </form>
+            </div>
+            <div class="footer">
+                Formula:<br/>
+                °C = (°F - 32) x 5/9<br/>
+                °F = °C x 9/5 + 32<br/>
+                Nota: El cero absoluto (0 ºK) es -273ºC o -459.4ºF.<br/>
+                Ejercicio PHP primer semestre del segundo curso de DAW.<br/>
+                Isaac Rovira
+            </div>
+        </div>        
+    </body>
+</html>
