@@ -18,7 +18,8 @@
     font-size: 9px;
     font-weight: 200;
 }
-#main{    
+#main{
+    display: block;
     margin: 1%;
     border-radius: 20px;
     border-color: deepskyblue;
@@ -26,6 +27,7 @@
     border-width: thin;
     align-content: center;
     padding: 2%;
+    
 }
 #menu {
     display: inline-block;    
@@ -36,7 +38,7 @@
 }
 #frame{
     border-style: none;
-    margin: 0px;
+    margin: 0%;
     padding: 0.5%;
     align-content: center;
     display: block;
@@ -44,21 +46,42 @@
 h1{
     text-align: center;
 }
-#datum{
+.datos{
+    text-align: center;
+    align-content: center;
+    margin: 1%;
+    display: block;    
+    float:left;
+    width: 31%;
+}
+.datum{
     margin: 1%;
     padding: 3%;
     border: thin;
     border-radius: 25px;
+    text-align: center;
     width: auto;
-    font-size: 20px;    
+    font-size: 15px;    
 }
 .button{
-    display: inline-block;
-    padding: 2% 4%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 1% 2%;
     color: white;
     border: none;
     text-align: center;
     font-size: 20px;
     cursor:pointer;
     background-color: cornflowerblue;
+}
+#resultado{    
+    color: red;
+}
+.marco{
+    display: block;
+    margin-top: 5%;    
+}
+#instruc{    
+    display: block;
+    float: none;    
 }
