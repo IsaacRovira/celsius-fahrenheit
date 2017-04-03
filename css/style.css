@@ -58,10 +58,14 @@ h1{
     margin: 1%;
     padding: 3%;
     border: thin;
+    border:none;    
     border-radius: 25px;
     text-align: center;
     width: auto;
     font-size: 15px;    
+}
+#dato{
+    border: solid thin black;
 }
 .button{
     width: 100%;
@@ -75,8 +79,7 @@ h1{
     background-color: cornflowerblue;
 }
 #resultado{    
-    color: red;
-    font-size: auto;
+    color: red;    
 }
 .marco{
     display: block;
@@ -85,4 +88,9 @@ h1{
 #instruc{    
     display: block;
     float: none;    
+}
+.error{
+    color: red;
+    font-weight: 700;
+    font-variant-caps: all-petite-caps;
 }

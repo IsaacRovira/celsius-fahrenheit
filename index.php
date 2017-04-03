@@ -22,7 +22,7 @@
             $T_max = 10000;
             $T_min = -273;
         }
-        if(!isset($datum)){$datum = "";}
+        if(!isset($datum)){$datum = "Introduce un valor";} //Valor inicial
 
         //Función para la conversión
             function CtoF($temp, $und)
@@ -79,7 +79,7 @@
                     <div id="main">
                     <div class="datos">
                         Temperatura<br/>
-                        <input class="datum" type="text" name="valor" value="<?php echo $datum;?>"/>
+                        <input class="datum" id="dato" type="text" name="valor" value="<?php echo $datum;?>"/>
                     </div>
                     <div class="datos">
                         <input type="radio" name="unidad" value="C" checked/>°C <input type="radio" name="unidad" value="F"/>°F
