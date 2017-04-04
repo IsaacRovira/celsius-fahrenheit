@@ -21,9 +21,11 @@
             $unit = $_POST['unidad'];
             $T_max = 10000;
             $T_min = -273;
+        }else{ //Valor inicial
+            $datum = "Introduce un valor";
+            $unit = 'C';
         }
-        if(!isset($datum)){$datum = "Introduce un valor";} //Valor inicial
-
+        
         //Función para la conversión
             function CtoF($temp, $und)
             {
@@ -82,7 +84,7 @@
                         <input class="datum" id="dato" type="text" name="valor" value="<?php echo $datum;?>"/>
                     </div>
                     <div class="datos">
-                        <input type="radio" name="unidad" value="C" checked/>°C <input type="radio" name="unidad" value="F"/>°F
+                        <input type="radio" name="unidad" value="C" <?php if($unit=="C"){echo 'checked';} ?>/>°C <input type="radio" name="unidad" value="F" <?php if($unit=="F"){echo 'checked';} ?>/>°F
                     </div>
                     <div class="datos">
                         Resultado<br/>
@@ -90,13 +92,7 @@
                         //Resultado de la conversión
                         //Comprobamos que hemos recibido el POST
                         if(isset($_POST['enviar']))
-                        {
-                            $datum = $_POST['valor'];
-                            $unit = $_POST['unidad'];
-                            $T_max = 10000;
-                            $T_min = -273;
-
-                            if(!isset($datum)){$datum = 0;}
+                        {                            
                             try
                             {
                                 if(checkNum($datum)) //Es un número?
